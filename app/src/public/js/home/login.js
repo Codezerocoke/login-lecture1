@@ -6,11 +6,12 @@ const id = document.querySelector("#id"),
 
 loginBtn.addEventListener("click", login);
 
-function login () {
+function login() {
     const req = {
         id: id.value,
         psword: psword.value,
-    }
+    };
+
     fetch("/login", {
         method: "POST",
         headers: {
@@ -18,5 +19,5 @@ function login () {
         },
         body: JSON.stringify(req),
     });
-}
+};
 
